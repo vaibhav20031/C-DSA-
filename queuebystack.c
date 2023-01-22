@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #define N 5
 int stack1[N], stack2[N];
