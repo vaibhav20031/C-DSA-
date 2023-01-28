@@ -58,7 +58,7 @@ int main(){
 // }
 // int main()
 // {
-//     printf("      DFS TRAVERSAL       \n");
+//     printf("      BFS TRAVERSAL       \n");
 //     struct queue *q;
 //     q->size = 5;
 //     q->arr = (int *)malloc(q->size * sizeof(int));

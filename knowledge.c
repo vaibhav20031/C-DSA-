@@ -6,16 +6,13 @@ struct data{
     char *name ;
     int salary ;
 };
-void data(struct data *obj,char name[],int age ){
+void data(struct data *obj,char*name,int age ){     // or void data(struct data *obj,char name[],int age )
     obj->name=name ;
     obj->age=age;
     printf("NAME IS=%s\n",obj->name);
     printf("AGE IS =%d\n",obj->age);
 }
 int main(){
-    // char*n;
-    // printf("enter name =");
-    // gets(n);
     struct data *obj=(struct data*)malloc(sizeof(struct data));
     data(obj,"vaibhav aggarwal",20);
     data(obj,"kunal",20);

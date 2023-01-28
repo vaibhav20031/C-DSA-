@@ -33,35 +33,35 @@ void postorder(struct tree *root){
         printf("%d ",root->data);
     }
 }
-// int bstsearch(struct tree *root,int key){
-//     if(root==NULL)
-//     return 0;
-//     if(root->data==key)
-//     return 1 ;
-//     else if(key>root->data)
-//     bstsearch(root->right,key);
-//     else
-//     bstsearch(root->left,key);
-// }
-// void insert(struct tree*root,int key){
-//     struct tree*prev=NULL;
-//     while(root!=NULL){
-//         prev=root ;
-//         if(key==root->data)
-//         printf("cannot insert\n");
-//         else if(key>root->data){
-//             root=root->right;
-//         }
-//         else if(key<root->data){
-//             root=root->left;
-//         }
-//     }
-//     struct tree*newchild=createchild(key);
-//     if(key>prev->data)
-//     prev->right =newchild;
-//     else 
-//     prev->left=newchild;
-// }
+int bstsearch(struct tree *root,int key){
+    if(root==NULL)
+    return 0;
+    if(root->data==key)
+    return 1 ;
+    else if(key>root->data)
+    bstsearch(root->right,key);
+    else
+    bstsearch(root->left,key);
+}
+void insert(struct tree*root,int key){
+    struct tree*prev=NULL;
+    while(root!=NULL){
+        prev=root ;
+        if(key==root->data)
+        printf("cannot insert\n");
+        else if(key>root->data){
+            root=root->right;
+        }
+        else if(key<root->data){
+            root=root->left;
+        }
+    }
+    struct tree*newchild=createchild(key);
+    if(key>prev->data)
+    prev->right =newchild;
+    else 
+    prev->left=newchild;
+}
 int bst(struct tree *root){
     static struct tree *prev=NULL;
     if(root!=NULL){
@@ -76,35 +76,35 @@ int bst(struct tree *root){
     else 
     return 1 ;
 }
-// struct tree*predecesor(struct tree *root ){
-//     root =root ->left;
-//     while(root->right!=NULL ){
-//         root=root->right ;
-//     }
-//     return root ;
-// }
-// struct tree*delete(struct tree *root,int value  ){
-//     struct tree*iorderpred;
-//     if(root==NULL){
-//         return NULL;
-//     }
-//     if(root->left==NULL && root->right ==NULL){
-//         free(root);
-//         return NULL ;
-//     }
-//     if(value<root->data){
-//         root->left=delete(root->left,value);
-//     }
-//     else if(value>root->data){
-//         root->right=delete(root->right,value);
-//     }
-//     else{
-//         iorderpred=predecesor(root);
-//         root->data=iorderpred->data;
-//         root->left=delete(root->left,iorderpred->data);
-//     }
-//     return root ;
-// }
+struct tree*predecesor(struct tree *root ){
+    root =root ->left;
+    while(root->right!=NULL ){
+        root=root->right ;
+    }
+    return root ;
+}
+struct tree*delete(struct tree *root,int value  ){
+    struct tree*iorderpred;
+    if(root==NULL){
+        return NULL;
+    }
+    if(root->left==NULL && root->right ==NULL){
+        free(root);
+        return NULL ;
+    }
+    if(value<root->data){
+        root->left=delete(root->left,value);
+    }
+    else if(value>root->data){
+        root->right=delete(root->right,value);
+    }
+    else{
+        iorderpred=predecesor(root);
+        root->data=iorderpred->data;
+        root->left=delete(root->left,iorderpred->data);
+    }
+    return root ;
+}
 int main(){
     struct tree*root=createchild(40);
     struct tree*child1=createchild(20);
@@ -154,8 +154,8 @@ int main(){
     // printf("AFTER DELETION INORDER :\n");
     // inorder(root);
     if(bst(root))
-    printf("yes it is a bst \n");
+    printf("\n yes it is a bst \n");
     else 
-    printf("no it is not a bst\n");
+    printf("\n no it is not a bst\n");
     return 0;
 }
