@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string.h>
 using namespace std ;
 class vaibhav{
     public :
@@ -7,7 +8,7 @@ class vaibhav{
     int slary;
     void data (){
         cout<<"enter name \n";
-        cin>>name ;
+        cin>>name;
         cout<<"enter age \n";
         cin>>age ;
         cout<<"enter slry\n";

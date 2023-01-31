@@ -48,11 +48,11 @@
 // class math{
 //     public :
 //     int a;
-//     double  operator -(math y ){
-//         int val=this->a  ;
-//         int val2=y.a;
-//         return  val+val2;
-//     }
+    // double  operator -(math y ){
+    //     int val=this->a  ;
+    //     int val2=y.a;
+    //     return  val+val2;
+    // }
 //     virtual inline void hello(){
 //         cout<<"mei toh math mei define hu \n";
 //     }
@@ -70,9 +70,9 @@
 //     }
 // };
 // int main(){
-    // math x,y;
-    // x.a =3;y.a=8;
-    // cout<< y-x<<"\n";
+//     math x,y;
+//     x.a =3;y.a=8;
+//     cout<< y-x<<"\n";
     // hybrid obj;
     // cout<<"hum example hu inheritance ambihity ka \n";
     // obj.solve ::hello();
