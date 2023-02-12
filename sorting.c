@@ -106,3 +106,44 @@ int main(){
     }
     return 0;
 }
+
+#include <stdio.h>
+int partition(int arr[],int low ,int high ){
+    int i=low ,j=high ,pivot=arr[low];
+    while(i<j){
+        while(arr[i]<=pivot){
+            i++;
+        }
+        while(arr[j]>pivot){
+            j--;
+        }
+        if(i<j){
+            int temp;
+            temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+    }
+    int temp2;
+    temp2=arr[low];
+    arr[low]=arr[j];
+    arr[j]=temp2;
+    return j;
+}
+void quicksort(int arr[],int low ,int high){
+    if(low<high){
+        int loc=partition(arr,low,high);
+        quicksort(arr,low,loc-1);
+        quicksort(arr,loc+1,high);
+    }
+}
+int main()
+{
+    printf("quick sort \n");
+    int arr[5]={5,4,3,2,1};
+    quicksort(arr,0,4);
+    for(int i=0;i<5;i++){
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
