@@ -1,35 +1,35 @@
-#include<bits/stdc++.h>
-using namespace std ;
-class vaibhav{
-    public :
-    int a ,b ;
-    void set(int x ){
-        this->a =x;
-    }
-    friend class vaib;
-};
-class vaib{
-    public :
-    void set(vaibhav &k,int data){
-        k.b=data;
-    }
-    void check(vaibhav &k ){
-    if(k.a>k.b){
-        cout<<"ans is = "<<k.a ;
-    }
-    else 
-    cout<< "ans is = "<<k.b ;
-    }
-};
-int main(){
-    vaibhav k;
-    k.set(10);
-    vaib p;
-    p.set(k,30);
-    p.check(k);
-    cout<<"\n"<<k.b ;
-    return 0;
-}
+// #include<bits/stdc++.h>
+// using namespace std ;
+// class vaibhav{
+//     public :
+//     int a ,b ;
+//     void set(int x ){
+//         this->a =x;
+//     }
+//     friend class vaib;
+// };
+// class vaib{
+//     public :
+//     void set(vaibhav &k,int data){
+//         k.b=data;
+//     }
+//     void check(vaibhav &k ){
+//     if(k.a>k.b){
+//         cout<<"ans is = "<<k.a ;
+//     }
+//     else 
+//     cout<< "ans is = "<<k.b ;
+//     }
+// };
+// int main(){
+//     vaibhav k;
+//     k.set(10);
+//     vaib p;
+//     p.set(k,30);
+//     p.check(k);
+//     cout<<"\n"<<k.b ;
+//     return 0;
+// }
 
 // #include <iostream>
 // using namespace std ;
@@ -154,40 +154,40 @@ int main(){
 //     }
 //     return 0;
 // }
-// #include<bits/stdc++.h>
-// using namespace std ;
-// class employee{
-//     public :
-//     string name ;
-//     char gender;
-//     int age ;
-//     char designation[20];
-//     int salary ;
-//     int experience;
-//     void getdata(){
-//         cout<<"enter name \n";cin>>this->name; 
-//         cout<<"enter gender \n"; cin>>this->gender;
-//         cout<<"enter age\n"; cin>>this->age;
-//         cout<<"enter designation \n";cin>>this->designation;
-//          cout<<"enter salary \n";cin>>this->salary;
-//         cout<<"enter experience \n";cin>>this->experience;  
-//     }
-//     void print(){
-//         cout<<this->name<<"\n"; 
-//         cout<<this->gender<<"\n"; 
-//         cout<<this->age<<"\n";     
-//         cout<<this->designation<<"\n";
-//         cout<<this->salary<<"\n"; 
-//         cout<<this->experience<<"\n"; 
-//     }
-// };
-// int main(){
-//     employee obj;
-//     int count =0;
-//     while(count!=10){
-//         obj.getdata();
-//         obj.print();
-//         count ++;
-//     }
-//     return 0;
-// }
+#include<bits/stdc++.h>
+using namespace std ;
+class employee{
+    public :
+    string name ;
+    char gender;
+    int age ;
+    char designation[20];
+    int salary ;
+    int experience;
+    void getdata(){
+        cout<<"enter name \n";cin>>this->name; 
+        cout<<"enter gender \n"; cin>>this->gender;
+        cout<<"enter age\n"; cin>>this->age;
+        cout<<"enter designation \n";cin>>this->designation;
+         cout<<"enter salary \n";cin>>this->salary;
+        cout<<"enter experience \n";cin>>this->experience;  
+    }
+    void print(){
+        cout<<this->name<<"\n"; 
+        cout<<this->gender<<"\n"; 
+        cout<<this->age<<"\n";     
+        cout<<this->designation<<"\n";
+        cout<<this->salary<<"\n"; 
+        cout<<this->experience<<"\n"; 
+    }
+};
+int main(){
+    employee obj;
+    int count =0;
+    while(count!=10){
+        obj.getdata();
+        obj.print();
+        count ++;
+    }
+    return 0;
+}

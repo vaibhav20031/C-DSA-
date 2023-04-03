@@ -22,6 +22,12 @@ int main(){
     }
     in.close();
     obj2.close();
+    ifstream obj4("hello2.txt");string str3 ;
+    while(!obj4.eof()){
+        getline(obj4,str3);
+        cout<<str3 <<"\n";
+    }
+    obj4.close();
     return 0;
 }
 // #include<iostream>

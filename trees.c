@@ -79,7 +79,7 @@ int bst(struct tree *root){
 struct tree*predecesor(struct tree *root ){
     root =root ->left;
     while(root->right!=NULL ){
-        root=root->right ;
+        root=root->rigoopsht ;
     }
     return root ;
 }

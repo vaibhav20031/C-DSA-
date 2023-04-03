@@ -40,36 +40,36 @@
 //     cout<<complex::name<<"\n" ;
 //     cout<<complex::random() ;
 //     complex a;
-//     // cout << a.name;
+//     cout << a.name;
 //     return 0;
 // }
-// #include<bits\stdc++.h>
-// using namespace std ;
-// class math{
-//     public :
-//     int a;
-    // double  operator -(math y ){
-    //     int val=this->a  ;
-    //     int val2=y.a;
-    //     return  val+val2;
-    // }
-//     virtual inline void hello(){
-//         cout<<"mei toh math mei define hu \n";
-//     }
-// };
-// class solve{
-//     public :
-//     inline void hello(){
-//         cout<<"mei toh solve mei define hu \n";
-//     }
-// };
-// class hybrid :public math,public solve {       
-//     public :
-//     inline void hello() {
-//         cout<<"mei hybrid mei define hu \n";
-//     }
-// };
-// int main(){
+#include<bits\stdc++.h>
+using namespace std ;
+class math{
+    public :
+    int a;
+    double  operator -(math y ){
+        int val=this->a  ;
+        int val2=y.a;
+        return  val+val2;
+    }
+    virtual inline void hello(){
+        cout<<"mei toh math mei define hu \n";
+    }
+};
+class solve{
+    public :
+    inline void hello(){
+        cout<<"mei toh solve mei define hu \n";
+    }
+};
+class hybrid :public math,public solve {       
+    public :
+    inline void hello() {
+        cout<<"mei hybrid mei define hu \n";
+    }
+};
+int main(){
 //     math x,y;
 //     x.a =3;y.a=8;
 //     cout<< y-x<<"\n";
@@ -79,9 +79,9 @@
     // obj.math ::hello();
     // cout<<"mei exmample hu polymorphism run time ka \n ";
     // obj.hello();
-//     cout<<"mei exmample hu polymorphism run time ka via virtual function \n ";
-//     math *obj=new math;
-//     hybrid a;
-//     obj=&a;
-//     obj->hello();
-// }
+    cout<<"mei exmample hu polymorphism run time ka via virtual function \n ";
+    math *obj=new math;
+    hybrid a;
+    obj=&a ;
+    obj->hello();
+}
